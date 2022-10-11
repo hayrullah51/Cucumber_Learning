@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="com.Batch81Cucumber" />
         <module name="com.batch81Cucumber" />
         <module name="batch81Cucumber" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="com.Batch81Cucumber" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
