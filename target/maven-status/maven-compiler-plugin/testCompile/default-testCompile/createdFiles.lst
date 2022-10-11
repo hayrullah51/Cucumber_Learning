@@ -1,1 +1,7 @@
+pages\MorhipoPage.class
+pages\TrendyolPage.class
 runners\Runner.class
+utilities\ReusableMethods$1.class
+pages\GooglePage.class
+stepDefinitions\OdevStepDefinition.class
+utilities\ReusableMethods.class

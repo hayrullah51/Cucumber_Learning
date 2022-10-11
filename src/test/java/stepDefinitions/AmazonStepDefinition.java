@@ -57,4 +57,20 @@ public class AmazonStepDefinition {
         String actualAramaSonucStr= amazonPage.aramaSonucElementi.getText();
         Assert.assertTrue(actualAramaSonucStr.contains(arananKelime));
     }
+
+
+    @Given("kullanici {string} sayfasina giderr")
+    public void kullaniciSayfasinaGiderr(String arg0) {
+        Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
+    }
+
+    @Then("kullanici {string} icin arama yapar")
+    public void kullaniciIcinAramaYapar(String arananUrun) {
+        amazonPage.aramaKutusu.sendKeys(arananUrun,Keys.ENTER);
+    }
+
+    @And("sonuclarin {string} icerdigini test eder")
+    public void sonuclarinIcerdiginiTestEder(String arananUrun) {
+
+    }
 }

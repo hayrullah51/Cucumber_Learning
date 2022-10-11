@@ -11,26 +11,27 @@ import java.time.Duration;
 
 public class Driver {
 
-    private Driver(){
+    private Driver() {
 
     }
+
     static WebDriver driver;
 
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver() {
 
-        if (driver==null) {
-            switch (ConfigReader.getProperty("browser")){
-                case "chrome" :
+        if (driver == null) {
+            switch (ConfigReader.getProperty("browser")) {
+                case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
                     break;
-                case "safari" :
+                case "safari":
                     WebDriverManager.safaridriver().setup();
-                    driver=new SafariDriver();
+                    driver = new SafariDriver();
                     break;
-                case "firefox" :
+                case "firefox":
                     WebDriverManager.firefoxdriver().setup();
-                    driver=new FirefoxDriver();
+                    driver = new FirefoxDriver();
                     break;
                 case "headless-chrome":
                     WebDriverManager.chromedriver().setup();
@@ -49,12 +50,19 @@ public class Driver {
         return driver;
     }
 
-    public static void closeDriver(){
-        if (driver!=null){ // driver'a deger atanmissa
+    public static void closeDriver() {
+        if (driver != null) { // driver'a deger atanmissa
             driver.close();
-           driver=null;
+            driver = null;
         }
 
     }
 
+    public static void quitDriver() {
+        if (driver != null) { // driver'a deger atanmissa
+            driver.quit();
+            driver = null;
+        }
+
+    }
 }
