@@ -34,10 +34,7 @@ public class OdevStepDefinition {
     int morhipoSonucSayisiInt;
 
 
-    @Given("kullanici {string} sayfasina gider")
-    public void kullanici_sayfasina_gider(String istenenUrl) {
-        Driver.getDriver().get(ConfigReader.getProperty("googleUrl"));
-    }
+
 
     @When("kullanici google da {string} aratir")
     public void kullanici_google_da_aratir(String aranacakUrun) {

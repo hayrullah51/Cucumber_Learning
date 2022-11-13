@@ -35,10 +35,10 @@ public class BlueRentACarStepDefinition {
         actions.sendKeys(Keys.TAB).sendKeys("12345").perform();
     }
 
-    @And("Login butonuna basar")
-    public void loginButonunaBasar() {
-        actions.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
-    }
+   // @And("Login butonuna basar")
+   // public void loginButonunaBasar() {
+     //   actions.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
+   // }
 
     @Then("sayfaya giris yapilamadigini kontrol eder")
     public void sayfayaGirisYapilamadiginiKontrolEder() {

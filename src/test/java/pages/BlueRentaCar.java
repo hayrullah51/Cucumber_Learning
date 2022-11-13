@@ -12,10 +12,11 @@ public class BlueRentaCar {
         Driver.getDriver().get(ConfigReader.getProperty("brcUrl"));
     }
 
-    @Then("Login yazisina tiklar")
-    public void loginYazisinaTiklar() {
 
-    }
+       @Then("Login yazisina tiklar")
+        public void loginYazisinaTiklar() {
+
+        }
 
     @And("gecersiz username girer")
     public void gecersizUsernameGirer() {
